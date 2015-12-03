@@ -1,11 +1,35 @@
+.setBg(@url, @bgSize: 100%, @bgRepeat: no-repeat) {
+    width: unit(image-width(@url)) * 0.1rem;
+    height: unit(image-height(@url)) * 0.1rem;
+    background-image: url(@url);
+    background-size: @bgSize;
+    background-repeat: no-repeat;
+}
+.fsize(@sizeValue) {
+    @remValue: @sizeValue/10;
+    font-size: ~"@{remValue}rem";
+}
+
+
+
+
+
 
 html {
     background: @white;
 }
-h1 {
-    color: @white;
-    font-size: 30px;
-    margin-top: 500px;
-    transition: all 0.25s ease;
+body {
+    overflow: hidden;
+}
+h1,
+h2,
+h2,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+.main-wrapper {
 
 }
