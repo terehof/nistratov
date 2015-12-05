@@ -1,0 +1,20 @@
+.btn {
+    display: inline-block;
+    text-align: center;
+    background: none;
+    color: @orange;
+    border: 3px solid @orange;
+    transition: all 0.25s linear;
+    border-radius: 0;
+    &.btn-get-advice {
+        float: right;
+        margin-top: 1.4rem;
+        padding: 1.5rem 1.8rem;
+        .fsize(24);
+    }
+
+    &:hover {
+        color: @white;
+        background: @orange;
+    }
+}

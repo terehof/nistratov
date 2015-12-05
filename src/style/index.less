@@ -23,17 +23,15 @@ html {
     font-size: 10px;
 }
 body {
-
+    font-family: 'Roboto';
+    font-weight: 400;
 }
-h1,
-h2,
-h2,
-h4,
-h5,
-h6 {
+h1, h2, h2, h4, h5, h6 {
     margin: 0;
 }
+a {
 
+}
 .main-wrapper {
 
 }
@@ -49,7 +47,7 @@ header {
     background-size: 100%;
 }
 .main-menu {
-    padding: 3rem 0 0;
+    padding: 6rem 0 0;
     li {
         margin: 0 0 0 2.8rem;
         &:first-child {
@@ -67,6 +65,16 @@ header {
         }
     }
 }
+
+
+.main-content {
+    padding: 4rem 0 0;
+}
+.home-slider {
+
+}
+
+
 .tile {
     margin-top: 15px;
     margin-bottom: 15px;
@@ -83,4 +91,25 @@ header {
 }
 .tile-big {
 
+}
+.header-right_phone {
+    text-align: right;
+    .phone {
+        text-decoration: none;
+        color: @gray-dark;
+        line-height: 1;
+        .fsize(42);
+        span {
+            .fsize(20);
+            color: @gray-light;
+        }
+    }
+    .callback {
+        text-decoration: underline;
+        color: @orange;
+        &:hover {
+            .fsize(14);
+            text-decoration: none;
+        }
+    }
 }
