@@ -1,15 +1,18 @@
 var app = app || {};
-app.main = {
+app.events = {
     init: function() {
-        this.events();
+        this.tile();
     },
-    events: function () {
-        console.log('test');
+    tile: function () {
+        var $tile = $('.tile');
+        $tile.each(function (i, item) {
+            $(item).css('height', $(item).width());
+        })
     }
 };
 var App = (function($, app){
     function init () {
-        app.main.init();
+        app.events.init();
     }
     return {
         init: init
@@ -17,4 +20,7 @@ var App = (function($, app){
 })(jQuery, app);
 $(function () {
     App.init();
+});
+$(window).resize(function () {
+    app.events.tile();
 });
