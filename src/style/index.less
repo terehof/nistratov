@@ -37,7 +37,10 @@ a {
 }
 
 header {
-    padding: 4rem 0 0;
+    padding: 4rem 0 2.5rem;
+    &.header-gray {
+        background: @header-bg;
+    }
 }
 .navbar-brand {
     display: inline-block;
@@ -68,7 +71,7 @@ header {
 
 
 .main-content {
-    padding: 4rem 0 0;
+    padding: 2rem 0 0;
 }
 .home-slider {
     position: relative;
@@ -532,10 +535,204 @@ h2 {
 }
 .tile-small {
     .hover {
-        width: 90%;
+        width: 88%;
     }
     .hover_icon {
         width: 6rem;
         height: 6rem;
     }
+}
+
+.all-projects-link {
+    display: block;
+    margin: 3.5rem auto auto;
+    text-align: center;
+    .fsize(24);
+    color: @orange;
+    text-decoration: underline;
+    &:hover {
+        color: @orange;
+        text-decoration: none;
+    }
+}
+
+footer {
+    margin: 4.5rem 0 0;
+    background: @footer-bg;
+    color: @footer-text;
+}
+.footer_contacts {
+    padding-top: 2.2rem;
+    padding-bottom: 2rem;
+}
+.footer_copyright {
+    padding: 1.75rem 0;
+    background: @white;
+}
+.footer_title {
+    margin: 0 0 1.7rem;
+    .fsize(18);
+    font-weight: 400;
+    color: @black;
+}
+
+.footer-contacts_item {
+    margin: 1rem 0;
+    > span {
+        display: block;
+    }
+}
+.footer-contacts_email {
+    text-decoration: underline;
+    color: @orange;
+    &:hover {
+        color: @orange;
+        text-decoration: none;
+    }
+}
+.footer-contacts_phone {
+    text-decoration: none;
+    color: @footer-text;
+    &:hover {
+        color: @footer-text;
+        text-decoration: none;
+    }
+}
+
+.social-link {
+    display: inline-block;
+    float: left;
+    margin: 6px 6px 0 0;
+    width: 26px;
+    height: 26px;
+    background: url(../images/social.png) no-repeat;
+    transition: background 0.25s ease;
+    &.fb {
+        background-position: 0 0;
+        &:hover {
+            background-position: 0 -26px;
+        }
+    }
+    &.vk {
+        background-position: -26px 0;
+        &:hover {
+            background-position: -26px -26px;
+        }
+    }
+    &.ok {
+        background-position: -52px 0;
+        &:hover {
+            background-position: -52px -26px;
+        }
+    }
+    &.inst {
+        background-position: -78px 0;
+        &:hover {
+            background-position: -78px -26px;
+        }
+    }
+}
+.footer_chapters {
+    margin: 0;
+    padding: 0;
+    li {
+        display: block;
+        margin: 0 0 0.4rem;
+        a {
+            text-decoration: underline;
+            color: @footer-text;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}
+.input-wrap {
+    position: relative;
+    width: 100%;
+    margin: 0 0 1.5rem;
+    &--small {
+        display: inline-block;
+        width: 48%;
+    }
+    &--left {
+        display: inline-block;
+        float: left;
+    }
+    &--right {
+        display: inline-block;
+        float: right;
+    }
+}
+.input,
+.textarea {
+    display: block;
+    width: 100%;
+    padding: 0.9rem 0.7rem;
+    border: 3px solid @input-border;
+    border-radius: 0;
+    resize: vertical;
+    &:focus {
+        outline: 3px solid darken(@input-border, 5%);
+        border: 3px solid darken(@input-border, 5%);
+    }
+}
+.input:-moz-placeholder,
+.input:-ms-input-placeholder,
+.input::-moz-placeholder,
+.input::-webkit-input-placeholder,
+.textarea:-moz-placeholder,
+.textarea:-ms-input-placeholder,
+.textarea::-moz-placeholder,
+.textarea::-webkit-input-placeholder {
+    color: @input-border;
+}
+.copyright {
+    margin: 0;
+}
+.powered-by {
+    margin: 0;
+    text-align: right;
+    a {
+        color: @orange;
+        text-decoration: underline;
+        &:hover {
+            color: @orange;
+            text-decoration: none;
+        }
+    }
+}
+
+.breadcrumbs-links {
+    li {
+        display: inline-block;
+        &:before {
+            content: ' - ';
+        }
+        &:first-child {
+            &:before {
+                content: '';
+            }
+        }
+        a {
+            color: @breadcrumbs;
+            text-decoration: underline;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.project-content {
+    color: @project-content;
+    .fsize(14);
+}
+.project_title {
+    .fsize(24);
+    font-weight: 800;
+}
+.project_subtitle {
+    font-weight: 400;
+
 }
