@@ -74,7 +74,7 @@ gulp.task('style', function () {
             cascade: false
         }))*/
         .pipe(gulp.dest(path.build.css))
-        .pipe(gulp.dest('src/css/'))
+        //.pipe(gulp.dest('src/css/'))
         .pipe(reload({ stream:true }));
 });
 gulp.task('style-min', function () {
