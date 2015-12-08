@@ -2,7 +2,7 @@
 <html lang="ru">
     <head>
         <meta charset="UTF-8">
-        <title>Новость - Академик Нистратов</title>
+        <title>Контакты - Академик Нистратов</title>
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/style.css">
     </head>
@@ -30,7 +30,7 @@
                             <a href="tel:4232740892" class="phone"><span>(423)</span> 274-08-92</a>
                             <a href="#" class="callback">Заказать обратный звонок</a>
                         </div>
-                        <div class="header-right_btn btn btn-get-advice">
+                        <div class="header-right_btn btn btn-get-advice btn-large">
                             Получить консультацию
                         </div>
                     </div>
@@ -49,8 +49,7 @@
                 <div class="col-md-12">
                     <ul class="breadcrumbs-links">
                         <li><a href="#">Главная</a></li>
-                        <li><a href="#">Новости</a></li>
-                        <li class="active">REDISSON BLU</li>
+                        <li class="active">Контакты</li>
                     </ul>
                 </div>
             </div>
@@ -58,28 +57,44 @@
         <!-- end breadcrumbs -->
 
         <!-- begin project content -->
-        <div class="container page-content news-content">
+        <div class="container page-content contacts-content">
             <div class="row">
                 <div class="col-md-12">
-                    <h1 class="page-title news-title">Разработали проект отеля Redisson Blu</h1>
+                    <h1 class="page-title contacts-title">Контакты</h1>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-9">
-                    <img src="images/news-det-image.jpg" class="news-content-image" alt="">
+                    <div class="contacts-map">
+                        <div id="map" class="map"></div>
+                    </div>
                 </div>
-                <div class="col-md-3">
-                    <p>
-                        <strong>
-                            Конкурсный проект отеля Redisson Blu на 75 000 квадратных метров
-                        </strong>
+                <div class="col-md-3 aside-contacts">
+                    <p class="contacts_item">
+                        <span>
+                            г. Владивосток, ул. Волховская 25, офис 25
+                        </span>
+                        <span>
+                            E-mail: <a href="mailto:info@akb-nistratov.ru" class="contacts_email">info@akb-nistratov.ru</a>,
+                        </span>
+                        <span>
+                            skype: akademiknistratov
+                        </span>
                     </p>
-                    <p>
-                        Проект для московского конкурса отеля пять звезд Redisson Blu на Москве реке общей площадью
-                        75 000 кв. м.
+                    <p class="contacts_item">
+                        <span>
+                            <a href="tel:84232740892" class="contacts_phone">8 (423) 274 08 92</a>
+                        </span>
+                        <span>
+                            <a href="tel:84232740891" class="contacts_phone">8 (423) 274 08 91</a>
+                        </span>
+                        <span>
+                            <a href="tel:84232368916" class="contacts_phone">8 (423) 236 89 16</a>
+                        </span>
                     </p>
+                    <div class="clearfix"></div>
                     <p>
-                        <a href="#">Подобнее о проекте</a>
+                        Также вы можете воспользоваться формой обратной связи внизу страницы.
                     </p>
                 </div>
             </div>
@@ -176,7 +191,7 @@
     </footer>
     <!-- end footer -->
 </div>
-
+<script src="http://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery.flexslider-min.js"></script>
 <script src="js/main.js"></script>
