@@ -4,6 +4,7 @@ app.events = {
         this.tile();
         this.sliderHome();
         this.map();
+        this.newsItems();
     },
     tile: function () {
         var $tile = $('.tile');
@@ -34,6 +35,15 @@ app.events = {
                     zoom: 18
                 });
                 DG.marker([43.15, 131.91]).addTo(map);
+            });
+        }
+    },
+    newsItems: function () {
+        var $newsWrap = $('.news-wrap');
+        if ($newsWrap.length > 0 ) {
+            $('.grid').masonry({
+                //columnWidth: '50%',
+                itemSelector: '.grid-item'
             });
         }
     }
