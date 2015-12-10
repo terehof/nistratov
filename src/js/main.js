@@ -39,13 +39,7 @@ app.events = {
         }
     },
     newsItems: function () {
-        var $newsWrap = $('.news-wrap');
-        if ($newsWrap.length > 0 ) {
-            $('.grid').masonry({
-                //columnWidth: '50%',
-                itemSelector: '.grid-item'
-            });
-        }
+
     }
 };
 var App = (function($, app){
@@ -61,4 +55,13 @@ $(function () {
 });
 $(window).resize(function () {
     app.events.tile();
+});
+$(window).load(function () {
+    var $newsWrap = $('.news-wrap');
+    if ($newsWrap.length > 0 ) {
+        $('.grid').masonry({
+            columnWidth: '.grid-item',
+            itemSelector: '.grid-item'
+        });
+    }
 });
