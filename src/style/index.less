@@ -351,7 +351,10 @@ html[xmlns] .flexslider .slides {
         width: 40px;
         height: 40px;
         transition: all 0.25s ease;
-        background: fade(@white, 50%);
+        background-color: fade(@white, 50%);
+        background-size: 13px;
+        background-position: center center;
+        background-repeat: no-repeat;
         svg {
             position: absolute;
             top: 50%;
@@ -367,7 +370,7 @@ html[xmlns] .flexslider .slides {
             }
         }
         &:hover {
-            background: @orange;
+            background-color: @orange;
             svg {
                 path {
                     stroke: @white !important;
@@ -379,12 +382,20 @@ html[xmlns] .flexslider .slides {
 }
 .flex-prev {
     left: -40px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAXCAMAAAAMT46wAAAAYFBMVEX///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8GYpHzAAAAH3RSTlMAAQQKERkgJCUxMjdJSlBjd3iMjY6horPDxNHS3uXpIatHaAAAAGdJREFUeNpd0EkCgCAMA0BB6q6oKCCL/v+XHlPobU5N0vDrCm0vt84T05F6QJhIkLy9glrnWkh5KyEKRkB9OoBmyZpp/kwRbc268JD2whRPwa2eG3+RCpmtV9ziCgShL1tjrLeqlvwB8f0EX9AObsoAAAAASUVORK5CYII=);
     svg {
         transform: translate(-50%, -50%) rotate(180deg) !important;
+    }
+    &:hover {
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAXCAMAAAAMT46wAAAAYFBMVEV+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn4RLlT4AAAAH3RSTlMAAQQKERkgJCUxMjdJSlBjd3iMjY6horPDxNHS3uXpIatHaAAAAGdJREFUeNpd0EkCgCAMA0BB6q6oKCCL/v+XHlPobU5N0vDrCm0vt84T05F6QJhIkLy9glrnWkh5KyEKRkB9OoBmyZpp/kwRbc268JD2whRPwa2eG3+RCpmtV9ziCgShL1tjrLeqlvwB8f0EX9AObsoAAAAASUVORK5CYII=);
     }
 }
 .flex-next {
     right: -40px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAXCAMAAAAMT46wAAAAWlBMVEX///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////9jZLFEAAAAHXRSTlMAAQQKERkgJDE3SEpRY3d4jY6horPDxNHS3d7l6SRic18AAABjSURBVHjaddBJDoAwCAXQznXubGur97+m20+M7F4IAT5jhmGZeyOexk5suyPWzXO0KlGgZc4SLVJRaB6qRjN3WeJ9LMThmUl3BR0dZrlvGvbGU/1dpUqCm3UN/PMvpkGzQiNepzMD7mbFwJEAAAAASUVORK5CYII=);  
+    &:hover {
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAXCAMAAAAMT46wAAAAWlBMVEV+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn71Kk40AAAAHXRSTlMAAQQKERkgJDE3SEpRY3d4jY6horPDxNHS3d7l6SRic18AAABjSURBVHjaddBJDoAwCAXQznXubGur97+m20+M7F4IAT5jhmGZeyOexk5suyPWzXO0KlGgZc4SLVJRaB6qRjN3WeJ9LMThmUl3BR0dZrlvGvbGU/1dpUqCm3UN/PMvpkGzQiNepzMD7mbFwJEAAAAASUVORK5CYII=);
+    }
 }
 .slide-content-wrap {
     position: absolute;
@@ -431,7 +442,7 @@ h2 {
     width: 100%;
     height: 100%;
     padding: 1.5rem 1.5rem;
-    line-height: 1.2;
+    line-height: 1.15;
     position: relative;
     color: @info-tile-text;
     border: 2px solid @info-tile-border;
@@ -454,6 +465,12 @@ h2 {
     }
     .fsize(14);
     .more-link {
+        display: block;
+        width: auto;
+        height: auto;
+        position: absolute;
+        left: 1.5rem;
+        bottom: 1.5rem;
         background: none;
         color: @orange;
         text-decoration: underline;
@@ -461,6 +478,14 @@ h2 {
             text-decoration: none;
         }
     }
+}
+.tile-info-content {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    right: 1.5rem;
+    bottom: 2.9rem;
+    overflow: hidden;
 }
 
 .tile {
@@ -478,10 +503,7 @@ h2 {
         background: #efefef;
         &:hover {
             .tile-bg {
-                width: 110%;
-                height: 110%;
-                top: -5%;
-                left: -5%;
+                //transform: scale(1.15);
             }
             .hover-wrap {
                 opacity: 1;
@@ -542,10 +564,7 @@ h2 {
     a {
         &:hover {
             .tile-bg {
-                width: 105%;
-                height: 105%;
-                top: -2.5%;
-                left: -2.5%;
+                //transform: scale(1.1);
             }
         }
     }
@@ -623,13 +642,13 @@ footer {
 }
 
 
-.social-link {
+.footer-icon-link {
     display: inline-block;
     float: left;
     margin: 6px 6px 0 0;
     width: 26px;
     height: 26px;
-    background: url(../images/decor/social.png) no-repeat;
+    background: url(../images/decor/footer-icon-link.png) no-repeat;
     transition: background 0.25s ease;
     &.fb {
         background-position: 0 0;
@@ -697,8 +716,11 @@ footer {
     border-radius: 0;
     resize: vertical;
     &:focus {
-        outline: 3px solid darken(@input-border, 5%);
+        outline: none;
         border: 3px solid darken(@input-border, 5%);
+    }
+    &.error {
+        border-color: red;
     }
 }
 .input:-moz-placeholder,
@@ -727,7 +749,7 @@ footer {
     }
 }
 .breadcrumbs {
-    margin: 0 auto 2.5rem;
+    margin: 0 auto 3.8rem;
 }
 .breadcrumbs-links {
     padding: 0;
@@ -764,7 +786,7 @@ footer {
     font-weight: 800;
     color: @black;
     text-transform: uppercase;
-    margin: 0 0 2rem;
+    margin: 0 0 2.2rem;
 }
 .project_title {
     margin: 0 0 1rem;
@@ -1093,6 +1115,58 @@ footer {
         margin-top: 0.7rem;
     }
 }
+.modal-content {
+    position: relative;
+    padding: 2.6rem 4.8rem;
+    border: none;
+    border-radius: 0;
+}
+.modal-header {
+    border: none;
+    margin: auto auto 0.7rem;
+}
+.modal-title {
+    font-weight: 700;
+    .fsize(24);
+    color: @black;
+    text-transform: uppercase;
+}
+.modal-dialog {
+    margin: 7% auto;
+}
+.modal-close {
+    position: absolute;
+    right: -3px;
+    top: -20px;
+    outline: none;
+    opacity: 1;
+    > span {
+        display: inline-block;
+        width: 16px;
+        height: 18px;
+        background-size: 100%;
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAQAAAD4MpbhAAABaElEQVQoFQXBsUtUARwA4O/37l0PkdOjojq8lsDBBicHx8jNoOGCHIKmoIb+hJYWx5aiwa2GIBrcm0TDGqKihsIWUVrDkkN813u/vi9AAAAAklIgFAAAaKFEsXtufqmJS1vAwfVOvvu09luj1RLKzcHkc+bXWy64uHcvs/7y+IqeKaWgUOntrDRHpwejpdHS6UFz9PqmofN6KgWFSt/g26PMHy++v8zcWbdo3kBfpSBU+uYs7G9mZu5vW7FswVBfJQqkFsXbbXi1ZVqlg5QUaCWrs7cf1ON6/PD+wlkdIbVaCF09c7/eZG48efos8+d7KxYNzegKQtfM4Xrm4ZaRO3sfMnc3LBqa1RWE6uO1zH9/llfdMLp6tz7OfL7msr5KhMIZU6b19Ewp0Thx7K+xE3UpkBq1sYkQWhO1ViJKKTVqTBQCqTVRa6QspcZEapwKQGo1JhoZQiF0hJCAkFIjtSFACCQgkBL+A/A+mxX96sMEAAAAAElFTkSuQmCC);
+    }
+    &:hover {
+        opacity: 0.5;
+    }
+}
+.modal-body {
+    padding: 0;
+}
+.modal-backdrop.in {
+    opacity: 0.75;
+}
+label.error {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    color: red;
+    font-weight: 400;
+    .fsize(10);
+}
+
+
 
 
 @media (max-width: 1200px) {
@@ -1114,6 +1188,9 @@ footer {
     .btn.btn-get-advice {
         float: none;
     }
+    .contacts-map .map {
+        height: 40rem;
+    }
 }
 @media (max-width: 992px) {
     .news-item_image {
@@ -1122,6 +1199,30 @@ footer {
     .footer-form {
         float: none;
         margin-bottom: 30px;
+    }
+    .project-section_descrip {
+        padding-top: 2.8rem;
+        padding-left: 15px;
+        &:before {
+            top: 1rem;
+            left: 1.5rem;
+            transform: rotate(90deg);
+        }
+    }
+    .tile .all-interiors {
+        height: auto;
+    }
+    .tile-all-interiors {
+        height: 5rem !important;
+    }
+    .breadcrumbs {
+        .fsize(11);
+    }
+    .aside-serv {
+        top: 0;
+    }
+    .news-det-descrip {
+        margin-top: 2rem;
     }
 }
 @media (max-width: 768px) {
@@ -1143,7 +1244,7 @@ footer {
     .footer-chapters {
         text-align: center;
     }
-    .social-link {
+    .footer-icon-link {
         float: none;
         margin: 6px 6px 0 6px;
     }
@@ -1154,10 +1255,29 @@ footer {
         text-align: center;
     }
 }
-
 @media (max-width: 640px) {
     html {
         font-size: 9px;
     }
+    .input-wrap--small {
+        float: none;
+        display: block;
+        width: 100%;
+    }
+    .contacts-map .map {
+        height: 25rem;
+    }
+    .btn {
+        &.btn-form {
+            width: 100%;
+        }
+    }
 }
-
+@media (min-width: 992px) {
+    .col-md-6 {
+        //width: 49.7%;
+        &:last-child {
+            float: right;
+        }
+    }
+}

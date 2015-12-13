@@ -42,7 +42,7 @@
                             <a href="tel:4232740892" class="phone"><span>(423)</span> 274-08-92</a>
                             <a href="#" class="callback">Заказать обратный звонок</a>
                         </div>
-                        <div class="header-right_btn btn btn-get-advice btn-large">
+                        <div class="header-right_btn btn btn-get-advice btn-large" data-toggle="modal" data-target="#get-advice-modal">
                             Получить консультацию
                         </div>
                     </div>
@@ -123,7 +123,7 @@
                 <div class="col-md-6 col-sm-12 footer-form">
                     <p class="footer_title">Задайте вопрос</p>
 
-                    <form action="#">
+                    <form action="#" class="form-ask-question">
                         <div class="input-wrap">
                             <textarea name="message" cols="30" rows="5" class="textarea" placeholder="Ваше сообщение"></textarea>
                         </div>
@@ -136,7 +136,7 @@
                         <div class="input-wrap input-wrap--small input-wrap--right">
                             <input type="text" name="phone" class="input" placeholder="Номер телефона">
                         </div>
-                        <button class="btn btn-form col-xs-12">Отправить</button>
+                        <button class="btn btn-form">Отправить</button>
                     </form>
                     <div class="clearfix"></div>
                 </div>
@@ -172,10 +172,10 @@
                     </p>
                     <p class="contacts_item">
                         <span>Мы в соцсетях:</span>
-                        <a href="#" class="social-link fb"></a>
-                        <a href="#" class="social-link vk"></a>
-                        <a href="#" class="social-link ok"></a>
-                        <a href="#" class="social-link inst"></a>
+                        <a href="#" class="footer-icon-link fb"></a>
+                        <a href="#" class="footer-icon-link vk"></a>
+                        <a href="#" class="footer-icon-link ok"></a>
+                        <a href="#" class="footer-icon-link inst"></a>
                     </p>
                 </div>
                 <div class="col-md-2 col-sm-6 col-xs-12 footer-chapters">
@@ -205,10 +205,43 @@
     </footer>
     <!-- end footer -->
 </div>
+
+<!-- begin modal -->
+<div class="modal fade" id="get-advice-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Задайте вопрос</h4>
+            </div>
+            <div class="modal-body">
+                <form action="#" class="modal-form-get-advice">
+                    <div class="input-wrap">
+                        <textarea name="message" cols="30" rows="5" class="textarea" placeholder="Ваше сообщение"></textarea>
+                    </div>
+                    <div class="input-wrap">
+                        <input type="text" name="name" class="input" placeholder="Ваше имя">
+                    </div>
+                    <div class="input-wrap input-wrap--small input-wrap--left">
+                        <input type="text" name="email" class="input" placeholder="Электронный адрес">
+                    </div>
+                    <div class="input-wrap input-wrap--small input-wrap--right">
+                        <input type="text" name="phone" class="input" placeholder="Номер телефона">
+                    </div>
+                    <button class="btn btn-form">Отправить</button>
+                </form>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end modal -->
+
 <script src="http://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery.flexslider-min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

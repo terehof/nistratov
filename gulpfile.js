@@ -6,8 +6,8 @@ var gulp = require('gulp'),
     cssmin = require('gulp-cssmin'),
     jsmin = require('gulp-jsmin'),
     rename = require('gulp-rename'),
-    //less = require('gulp-less'),
-    less = require('gulp-less-sourcemap'),
+    less = require('gulp-less'),
+    //less = require('gulp-less-sourcemap'),
     sourcemaps = require('gulp-sourcemaps'),
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
@@ -65,14 +65,14 @@ gulp.task('images', function() {
 gulp.task('style', function () {
     return gulp.src(path.src.style)
         .pipe(less({
-            sourceMap: {
-                sourceMapRootpath: path.src.style
-            }
+            //sourceMap: {
+            //    sourceMapRootpath: path.src.style
+            //}
         }))
-        /*.pipe(autoprefixer({
+        .pipe(autoprefixer({
             browsers: ['> 1%'],
             cascade: false
-        }))*/
+        }))
         .pipe(gulp.dest(path.build.css))
         //.pipe(gulp.dest('src/css/'))
         .pipe(reload({ stream:true }));
