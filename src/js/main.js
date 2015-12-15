@@ -56,7 +56,7 @@ app.events = {
     formValidate: function () {
         $('input[name="phone"]').mask("+7 (999) 999-9999");
 
-        $(".modal-form-get-advice").validate({
+        $('.modal-form-get-advice').validate({
             rules: {
                 email: {
                     required: true,
@@ -74,11 +74,10 @@ app.events = {
             },
             submitHandler: function (form) {
                 alert('отправка формы');
-
             }
         });
 
-        $(".form-ask-question").validate({
+        $('.form-ask-question').validate({
             rules: {
                 email: {
                     required: true,
@@ -88,6 +87,19 @@ app.events = {
                     required: true
                 },
                 message: {
+                    required: true
+                },
+                phone: {
+                    required: true
+                }
+            },
+            submitHandler: function (form) {
+                alert('отправка формы');
+            }
+        });
+        $('.modal-form-callback').validate({
+            rules: {
+                name: {
                     required: true
                 },
                 phone: {

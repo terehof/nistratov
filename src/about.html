@@ -22,7 +22,9 @@
                                     <span class="icon-bar"></span>
                                     <span class="icon-bar"></span>
                                 </button>
-                                <a class="navbar-brand" href="#"></a>
+                                <a class="navbar-brand" href="#">
+                                    <img src="images/decor/main-logo.png" alt="">
+                                </a>
                             </div>
 
                             <div class="collapse navbar-collapse" id="main-menu">
@@ -40,7 +42,7 @@
                     <div class="col-lg-3 col-md-12 header-right">
                         <div class="header-right_phone">
                             <a href="tel:4232740892" class="phone"><span>(423)</span> 274-08-92</a>
-                            <a href="#" class="callback">Заказать обратный звонок</a>
+                            <a href="#" class="callback" data-toggle="modal" data-target="#callback-modal">Заказать обратный звонок</a>
                         </div>
                         <div class="header-right_btn btn btn-get-advice btn-large" data-toggle="modal" data-target="#get-advice-modal">
                             Получить консультацию
@@ -299,6 +301,29 @@
                         <input type="text" name="phone" class="input" placeholder="Номер телефона">
                     </div>
                     <button class="btn btn-form">Отправить</button>
+                </form>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade callback-modal" id="callback-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabe2">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabe2">Заказать обратный звонок</h4>
+            </div>
+            <div class="modal-body">
+                <form action="#" class="modal-form-callback">
+                    <div class="input-wrap">
+                        <input type="text" name="name" class="input" placeholder="Ваше имя">
+                    </div>
+                    <div class="input-wrap">
+                        <input type="text" name="phone" class="input" placeholder="Номер телефона">
+                    </div>
+                    <button class="btn btn-form btn-form--callback">Отправить</button>
                 </form>
                 <div class="clearfix"></div>
             </div>
