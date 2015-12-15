@@ -70,7 +70,7 @@ gulp.task('style', function () {
             //}
         }))
         .pipe(autoprefixer({
-            browsers: ['> 1%'],
+            browsers: ['> 0.1%'],
             cascade: false
         }))
         .pipe(gulp.dest(path.build.css))

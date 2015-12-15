@@ -23,9 +23,14 @@ app.events = {
     },
     tile: function () {
         var $tile = $('.tile');
-        $tile.each(function (i, item) {
-            $(item).css('height', $(item).width());
-        })
+        if ($(window).width() > 1024) {
+            $tile.each(function (i, item) {
+                $(item).css('height', $(item).width());
+            })
+        } else {
+            console.log('else');
+            $tile.css('height', 'auto');
+        }
     },
     sliderHome: function () {
         var $flexslider = $('.flexslider');
@@ -73,7 +78,51 @@ app.events = {
                 }
             },
             submitHandler: function (form) {
-                alert('отправка формы');
+                var $form = $(form),
+                    $btn = $form.find('.btn-form'),
+                    $preloader = $form.find('.preloader'),
+                    $messageSuccess = $form.find('.message.success'),
+                    $messageError = $form.find('.message.error');
+                $btn.css('opacity', 0);
+                $preloader.fadeIn();
+                $messageSuccess.hide();
+                $messageError.hide();
+
+                /* удалить. это просто "демо" прелоадера) */
+                setTimeout(function () {
+                    $preloader.fadeOut();
+                    $btn.css('opacity', 1);
+                    //$messageSuccess.fadeIn();
+                    $messageError.fadeIn();
+                }, 2000);
+                /* удалить */
+
+                /*$.ajax({
+                    url: 'url',
+                    success: function(data) {
+                        if (data.status = 'success') {
+                            //  success message
+                            $messageSuccess.fadeIn();
+                            $preloader.fadeOut();
+                            $btn.css('opacity', 1);
+                        } else {
+                            console.log('failure');
+                            console.log(data);
+                            //  error message
+                            $messageError.fadeIn();
+                            $preloader.fadeOut();
+                            $btn.css('opacity', 1);
+                        }
+                    },
+                    error: function (data) {
+                        console.log('error');
+                        console.log(data);
+                        //  error message
+                        $messageError.fadeIn();
+                        $preloader.fadeOut();
+                        $btn.css('opacity', 1);
+                    }
+                })*/
             }
         });
 
@@ -94,7 +143,51 @@ app.events = {
                 }
             },
             submitHandler: function (form) {
-                alert('отправка формы');
+                var $form = $(form),
+                    $btn = $form.find('.btn-form'),
+                    $preloader = $form.find('.preloader'),
+                    $messageSuccess = $form.find('.message.success'),
+                    $messageError = $form.find('.message.error');
+                $btn.css('opacity', 0);
+                $preloader.fadeIn();
+                $messageSuccess.hide();
+                $messageError.hide();
+
+                /* удалить. это просто "демо" прелоадера) */
+                setTimeout(function () {
+                    $preloader.fadeOut();
+                    $btn.css('opacity', 1);
+                    $messageSuccess.fadeIn();
+                    //$messageError.fadeIn();
+                }, 2000);
+                /* удалить */
+
+                /*$.ajax({
+                    url: 'url',
+                    success: function(data) {
+                        if (data.status = 'success') {
+                            //  success message
+                            $messageSuccess.fadeIn();
+                            $preloader.fadeOut();
+                            $btn.css('opacity', 1);
+                        } else {
+                            console.log('failure');
+                            console.log(data);
+                            //  error message
+                            $messageError.fadeIn();
+                            $preloader.fadeOut();
+                            $btn.css('opacity', 1);
+                        }
+                    },
+                    error: function (data) {
+                        console.log('error');
+                        console.log(data);
+                        //  error message
+                        $messageError.fadeIn();
+                        $preloader.fadeOut();
+                        $btn.css('opacity', 1);
+                    }
+                });*/
             }
         });
         $('.modal-form-callback').validate({
@@ -107,8 +200,51 @@ app.events = {
                 }
             },
             submitHandler: function (form) {
-                alert('отправка формы');
+                var $form = $(form),
+                    $btn = $form.find('.btn-form'),
+                    $preloader = $form.find('.preloader'),
+                    $messageSuccess = $form.find('.message.success'),
+                    $messageError = $form.find('.message.error');
+                $btn.css('opacity', 0);
+                $preloader.fadeIn();
+                $messageSuccess.hide();
+                $messageError.hide();
 
+                /* удалить. это просто "демо" прелоадера) */
+                setTimeout(function () {
+                    $preloader.fadeOut();
+                    $btn.css('opacity', 1);
+                    $messageSuccess.fadeIn();
+                    //$messageError.fadeIn();
+                }, 2000);
+                /* удалить */
+
+                /*$.ajax({
+                    url: 'url',
+                    success: function(data) {
+                        if (data.status = 'success') {
+                            //  success message
+                            $messageSuccess.fadeIn();
+                            $preloader.fadeOut();
+                            $btn.css('opacity', 1);
+                        } else {
+                            console.log('failure');
+                            console.log(data);
+                            //  error message
+                            $messageError.fadeIn();
+                            $preloader.fadeOut();
+                            $btn.css('opacity', 1);
+                        }
+                    },
+                    error: function (data) {
+                         console.log('error');
+                         console.log(data);
+                         //  error message
+                         $messageError.fadeIn();
+                         $preloader.fadeOut();
+                         $btn.css('opacity', 1);
+                    }
+                });*/
             }
         });
     }

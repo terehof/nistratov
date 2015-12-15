@@ -115,6 +115,7 @@
                                             </span>
                                             <span class="text">
                                                 АКБ Нистратов имеет достаточный опыт проекти- рование как и городских объектов, так и частных домов, квартир.
+                                                Когда мы покупаем дорогую вещь, мы знаем что она этого стоит. Ваш будущий дом, квартира, офис - это ли не одна из дорогих Вашему сердцу и глазам вещь. Атмосфера этого места пуста пока нет подобающего оформления пространства.
                                             </span>
                                             <span class="text">
                                                 Когда мы покупаем дорогую вещь, мы знаем что она этого стоит. Ваш будущий дом, квартира, офис - это ли не одна из дорогих Вашему сердцу и глазам вещь. Атмосфера этого места пуста пока нет подобающего оформления пространства.
@@ -163,7 +164,7 @@
             <!-- begin не изменяются размеры плитки -->
             <div class="col-md-6 tiles-wrap">
                 <div class="row">
-                    <div class="col-md-6 col-sm-6 col-xs-6 tile tile-small">
+                    <div class="col-md-6 col-sm-12 col-xs-12 tile tile-small">
                         <div class="tile-info">
                             <div class="tile-info-content">
                                 <p>Специалисты компании «АКАДЕМИК НИСТРАТОВ» уже не первый год осуществляют работы по архитектурному проекти- рованию зданий во Владивостоке и Приморском крае.</p>
@@ -172,7 +173,7 @@
                             <a href="#" class="more-link">Подробнее о нас..</a>
                         </div>
                     </div>
-                    <div class="col-md-6 col-sm-6 col-xs-6 tile tile-small">
+                    <div class="col-md-6 col-sm-12 col-xs-12 tile tile-small">
                         <a href="#">
                             <img class="tile-bg" src="images/tile-sm-1.jpg" alt="">
                             <span class="hover-wrap">
@@ -181,6 +182,7 @@
                                     <span class="hover_title">Интерьер частной квартиры</span>
                                     <span class="hover_line"></span>
                                     <span class="hover_text">
+                                        Проект интерьера частной квартиры в городе Владивостоке общей площадью 120кв.м.
                                         Проект интерьера частной квартиры в городе Владивостоке общей площадью 120кв.м.
                                     </span>
                                 </span>
@@ -199,6 +201,8 @@
                                     <span class="hover_line"></span>
                                     <span class="hover_text">
                                         Проект интерьера частной квартиры в городе Владивостоке общей площадью 120кв.м.
+                                        Проект интерьера частной квартиры в городе Владивостоке общей площадью 120кв.м.
+                                        Проект интерьера частной квартиры в городе Владивостоке общей площадью 120кв.м.
                                     </span>
                                 </span>
                             </span>
@@ -214,6 +218,7 @@
                                     <span class="hover_line"></span>
                                     <span class="hover_text">
                                         Проект интерьера частной квартиры в городе Владивостоке общей площадью 120кв.м.
+                                        Проект интерьера частной квартиры в городе
                                     </span>
                                 </span>
                             </span>
@@ -283,6 +288,8 @@
                             <span class="hover_line"></span>
                             <span class="hover_text">
                                 Проект интерьера частной квартиры в городе Владивостоке общей площадью 120кв.м.
+                                Проект интерьера частной квартиры в городе Владивостоке общей площадью 120кв.м.
+                                Проект интерьера частной
                             </span>
                         </span>
                     </span>
@@ -303,6 +310,7 @@
                     </span>
                 </a>
             </div>
+            <div class="clearfix visible-sm"></div>
             <div class="col-md-3 col-sm-6 col-xs-6 tile tile-small">
                 <a href="#">
                     <img class="tile-bg" src="images/tile-sm-6.jpg" alt="">
@@ -365,6 +373,7 @@
                     </span>
                 </a>
             </div>
+            <div class="clearfix visible-sm"></div>
             <div class="col-md-3 col-sm-6 col-xs-6 tile tile-small">
                 <a href="#">
                     <img class="tile-bg" src="images/tile-sm-10.jpg" alt="">
@@ -395,6 +404,9 @@
                     </span>
                 </a>
             </div>
+            <div class="clearfix visible-sm"></div>
+
+
         </div>
         <div class="row">
             <div class="col-md-12">
@@ -425,7 +437,13 @@
                     <div class="input-wrap input-wrap--small input-wrap--right">
                         <input type="text" name="phone" class="input" placeholder="Номер телефона">
                     </div>
-                    <button class="btn btn-form">Отправить</button>
+                    <div class="clearfix"></div>
+                    <div class="modal-btn-wrap">
+                        <button class="btn btn-form">Отправить</button>
+                        <img src="images/decor/preloader.GIF" alt="" class="preloader preloader-ask-question">
+                        <p class="message success">Ваше сообщение отправлено!</p>
+                        <p class="message error">Произошла ошибка.</p>
+                    </div>
                 </form>
                 <div class="clearfix"></div>
             </div>
@@ -494,7 +512,6 @@
 </footer>
 <!-- end footer -->
 
-
 <!-- begin modal -->
 <div class="modal fade" id="get-advice-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
@@ -517,14 +534,19 @@
                     <div class="input-wrap input-wrap--small input-wrap--right">
                         <input type="text" name="phone" class="input" placeholder="Номер телефона">
                     </div>
-                    <button class="btn btn-form">Отправить</button>
+                    <div class="clearfix"></div>
+                    <div class="modal-btn-wrap">
+                        <button class="btn btn-form btn-form-get-advice">Отправить</button>
+                        <img src="images/decor/preloader.GIF" alt="" class="preloader preloader-get-advice">
+                        <p class="message success">Ваше сообщение отправлено!</p>
+                        <p class="message error">Произошла ошибка.</p>
+                    </div>
                 </form>
                 <div class="clearfix"></div>
             </div>
         </div>
     </div>
 </div>
-
 <div class="modal fade callback-modal" id="callback-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabe2">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -540,7 +562,13 @@
                     <div class="input-wrap">
                         <input type="text" name="phone" class="input" placeholder="Номер телефона">
                     </div>
-                    <button class="btn btn-form btn-form--callback">Отправить</button>
+                    <div class="clearfix"></div>
+                    <div class="modal-btn-wrap">
+                        <button class="btn btn-form btn-form--callback">Отправить</button>
+                        <img src="images/decor/preloader.GIF" alt="" class="preloader preloader-callback">
+                        <p class="message success">Ваше сообщение отправлено!</p>
+                        <p class="message error">Произошла ошибка.</p>
+                    </div>
                 </form>
                 <div class="clearfix"></div>
             </div>

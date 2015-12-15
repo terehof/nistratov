@@ -240,7 +240,13 @@
                     <div class="input-wrap input-wrap--small input-wrap--right">
                         <input type="text" name="phone" class="input" placeholder="Номер телефона">
                     </div>
-                    <button class="btn btn-form">Отправить</button>
+                    <div class="clearfix"></div>
+                    <div class="modal-btn-wrap">
+                        <button class="btn btn-form">Отправить</button>
+                        <img src="images/decor/preloader.GIF" alt="" class="preloader preloader-ask-question">
+                        <p class="message success">Ваше сообщение отправлено!</p>
+                        <p class="message error">Произошла ошибка.</p>
+                    </div>
                 </form>
                 <div class="clearfix"></div>
             </div>
@@ -309,7 +315,6 @@
 </footer>
 <!-- end footer -->
 
-
 <!-- begin modal -->
 <div class="modal fade" id="get-advice-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
@@ -332,14 +337,19 @@
                     <div class="input-wrap input-wrap--small input-wrap--right">
                         <input type="text" name="phone" class="input" placeholder="Номер телефона">
                     </div>
-                    <button class="btn btn-form">Отправить</button>
+                    <div class="clearfix"></div>
+                    <div class="modal-btn-wrap">
+                        <button class="btn btn-form btn-form-get-advice">Отправить</button>
+                        <img src="images/decor/preloader.GIF" alt="" class="preloader preloader-get-advice">
+                        <p class="message success">Ваше сообщение отправлено!</p>
+                        <p class="message error">Произошла ошибка.</p>
+                    </div>
                 </form>
                 <div class="clearfix"></div>
             </div>
         </div>
     </div>
 </div>
-
 <div class="modal fade callback-modal" id="callback-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabe2">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -355,7 +365,13 @@
                     <div class="input-wrap">
                         <input type="text" name="phone" class="input" placeholder="Номер телефона">
                     </div>
-                    <button class="btn btn-form btn-form--callback">Отправить</button>
+                    <div class="clearfix"></div>
+                    <div class="modal-btn-wrap">
+                        <button class="btn btn-form btn-form--callback">Отправить</button>
+                        <img src="images/decor/preloader.GIF" alt="" class="preloader preloader-callback">
+                        <p class="message success">Ваше сообщение отправлено!</p>
+                        <p class="message error">Произошла ошибка.</p>
+                    </div>
                 </form>
                 <div class="clearfix"></div>
             </div>
