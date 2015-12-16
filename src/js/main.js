@@ -20,6 +20,7 @@ app.events = {
         this.sliderHome();
         this.map();
         this.formValidate();
+        this.lightbox();
     },
     tile: function () {
         var $tile = $('.tile');
@@ -247,6 +248,13 @@ app.events = {
                 });*/
             }
         });
+    },
+    lightbox: function () {
+        lightbox.option({
+            alwaysShowNavOnTouchDevices: true,
+            albumLabel: '',
+            wrapAround: true
+        })
     }
 };
 var App = (function($, app){
