@@ -1,0 +1,255 @@
+@tableBorder: #f26522;
+
+.serv-wrap {
+    padding: 1rem 0 0;
+}
+.serv-item {
+    &_image {
+        border: none;
+    }
+    &_title {
+        text-align: center;
+    }
+    &:hover {
+        .serv-item_image {
+            border: none;
+        }
+    }
+}
+
+.serv-content {
+    p {
+        margin: 1.2rem 0;
+    }
+}
+.serv-det-table{
+    margin: 0 0 4.5rem;
+    font-size: 1.4rem;
+    color: #4f4f4f;
+    width: 100%;
+    overflow-y: auto;
+    _overflow: auto;
+
+
+    table {
+        border: 2px solid @tableBorder;
+    }
+    th {
+        background: @tableBorder;
+        color: #fff;
+    }
+    tr {
+        border-bottom: 1px solid @tableBorder;
+    }
+    td {
+        font-weight: 700;
+        &:first-child {
+            padding-right: 15%;
+        }
+    }
+    th, td {
+        padding: 1rem 1.8rem;
+        &:nth-child(2),
+        &:nth-child(3) {
+            text-align: center;
+        }
+    }
+    .with-dropdown {
+        cursor: pointer;
+        td {
+            &:first-child {
+                span {
+                    line-height: 1;
+                    border-bottom: 1px dashed #4f4f4f;
+                }
+            }
+        }
+        &:hover {
+            td {
+                &:first-child {
+                    span {
+                        border-bottom: 1px solid #fff;
+                    }
+                }
+            }
+        }
+        &.active {
+            border-bottom: none;
+            td {
+                &:first-child {
+                    span {
+                        line-height: 1;
+                        border-bottom: 1px solid #fff;
+                    }
+                }
+            }
+        }
+    }
+    .table-dropdown {
+        font-size: 0;
+        font-weight: 400;
+        border: none;
+        .drop-down-wrap {
+            display: none;
+            padding: 0 1.8rem;
+        }
+        table {
+            font-size: 1.2rem;
+            width: 100%;
+            //margin-top: -0.6rem;
+            border: none;
+        }
+        > td {
+            padding: 0 !important;
+        }
+        td {
+            padding: 0 1.8rem 0.5rem;
+            &:nth-child(2) {
+                width: 15%;
+            }
+            &:nth-child(3) {
+                width: 15%;
+            }
+        }
+        tr {
+            border: none;
+        }
+        .check {
+            display: inline-block;
+            width: 2rem;
+            height: 1.3rem;
+            background-image: url(../images/decor/table-check.svg);
+            background-size: 100% 100%;
+        }
+    }
+}
+.other-services {
+    padding: 0;
+    margin: 0;
+    li {
+        padding: 0 !important;
+        font-size: 1.4rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        a {
+            display: block;
+            padding-left: 3.8rem;
+            text-decoration: none;
+            color: #4f4f4f;
+            background-size: 2.8rem;
+            background-repeat: no-repeat;
+            background-position: left 3px;
+            &:hover {
+                color: #f26522;
+            }
+        }
+        &:before {
+            display: none !important;
+        }
+        &.design {
+            a {
+                background-image: url(../images/serv-item-2.png);
+            }
+        }
+        &.working-design {
+            a {
+                background-image: url(../images/serv-item-1.png);
+            }
+        }
+        &.budgeting {
+            a {
+                background-image: url(../images/serv-item-4.png);
+            }
+        }
+        &.technical-inspection {
+            a {
+                background-image: url(../images/serv-item-3.png);
+            }
+        }
+        &.renovation-of-apartments {
+            a {
+                background-image: url(../images/serv-item-5.png);
+            }
+        }
+        &.authors-supervision {
+            a {
+                background-image: url(../images/serv-item-6.png);
+            }
+        }
+        &.capital-construction {
+            a {
+                background-image: url(../images/serv-item-7.png);
+            }
+        }
+    }
+}
+.additional-services {
+    &__title {
+        margin: 5rem 0 1.5rem;
+        font-size: 2rem;
+        font-weight: 700;
+    }
+    &__item {
+        text-align: center;
+        a {
+            display: block;
+            margin: 0 0 1.5rem;
+            padding: 1.6rem;
+            text-decoration: none;
+            color: #4f4f4f;
+            border: 3px solid @tableBorder;
+            font-size: 1.4rem;
+            &:hover {
+                color: #4f4f4f;
+            }
+            strong {
+                display: block;
+            }
+            span {
+                display: block;
+                &.price {
+                    margin: 1.4rem 0;
+                    font-size: 1.8rem;
+                }
+                &.text {
+                    text-align: left;
+                }
+            }
+        }
+    }
+}
+
+
+
+.serv-det-table > table {
+    min-width: 847px;
+}
+
+@media (max-width: 1024px) {
+    .serv-det-table td:first-child {
+        padding-right: 1.8rem;
+    }
+}
+@media (max-width: 960px) {
+    .serv-det-table > table {
+        min-width: 740px;
+    }
+}
+@media (max-width: 960px) {
+    .serv-det-table > table {
+        min-width: 580px;
+    }
+    .serv-det-table .table-dropdown td:nth-child(1),
+    .serv-det-table .table-dropdown td:nth-child(2) {
+        width: 75px;
+    }
+}
+
+@media (max-width: 480px) {
+    .serv-item {
+        margin: 0 0 3rem;
+    }
+    .serv-item_title {
+        font-size: 1.6rem;
+    }
+}

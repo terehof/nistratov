@@ -91,7 +91,7 @@ gulp.task('style-min', function () {
 });
 gulp.task('js', function () {
     return gulp.src(['bower_components/jquery/dist/jquery.min.js', path.src.js])
-        .pipe(uglify())
+        //.pipe(uglify())
         //.pipe(concat('main.js'))
         .pipe(gulp.dest(path.build.js))
         .pipe(reload({ stream:true }));
