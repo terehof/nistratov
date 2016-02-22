@@ -272,7 +272,6 @@ app.events = {
                     $dropDown.slideToggle(function () {
                         $this.toggleClass('active');
                     });
-
                 }
             });
         }
